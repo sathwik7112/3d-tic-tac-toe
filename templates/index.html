@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Group 7 - 3D Tic Tac Toe</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="game-container">
+    <!-- Side Panel -->
+    <div class="control-panel">
+      <div class="logo">
+        <h1>GROUP 7</h1>
+        <div class="version">v2.0</div>
+      </div>
+      
+      <div class="player-section">
+        <div class="player-label">PLAY:</div>
+        <div class="player-token">X</div>
+      </div>
+      
+      <div class="difficulty-section">
+        <div class="difficulty-label">DIFFICULTY:</div>
+        <div class="difficulty-controls">
+          <button class="diff-btn" data-value="2">EASY</button>
+          <button class="diff-btn" data-value="4">MEDIUM</button>
+          <button class="diff-btn" data-value="6">INSANE</button>
+        </div>
+      </div>
+      
+      <div class="stats-section">
+        <div class="stat-row">
+          <div class="stat-label">DEPTH:</div>
+          <div class="stat-value" id="depth-stat">-</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label">TIME:</div>
+          <div class="stat-value" id="time-stat">-</div>
+        </div>
+      </div>
+      
+      <div class="developers-section">
+        <div class="developers-label">DEVELOPERS:</div>
+        <div class="developers-list">
+          <div class="developer">Sai Vishnu Sathwik Gurijala</div>
+          <div class="developer">Esha Santhoshini Pothukanuru</div>
+          <div class="developer">Rishik Kasula</div>
+          <div class="developer">Sai Keerthan Bingi</div>
+        </div>
+      </div>
+      
+      <div class="button-section">
+        <button id="restart" class="game-btn reset-btn">RESET</button>
+        <button id="rules" class="game-btn rules-btn">RULES</button>
+      </div>
+    </div>
+    
+    <!-- Game Board Area -->
+    <div class="game-area">
+      <div id="status" class="status-display">SELECT DIFFICULTY TO START</div>
+      
+      <div class="boards-container">
+        {% for z in range(4) %}
+        <div class="board-wrapper">
+          <div class="board-level">LEVEL {{ z+1 }}</div>
+          <div class="board" data-level="{{ z }}">
+            {% for y in range(4) %}
+              {% for x in range(4) %}
+                <button class="cell" data-pos="{{ z }},{{ y }},{{ x }}"></button>
+              {% endfor %}
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <!-- Rules Modal -->
+  <div id="rules-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>GAME RULES</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to <span class="highlight">3D Tic Tac Toe</span> by Group 7!</p>
+        
+        <h3>OBJECTIVE</h3>
+        <p>Get 4 of your marks in a straight line anywhere in the 3D space.</p>
+        
+        <h3>GAMEPLAY</h3>
+        <ul>
+          <li>You play as <span class="player-mark">X</span>, AI plays as <span class="ai-mark">O</span></li>
+          <li>Take turns placing your mark in any empty cell</li>
+          <li>Winning requires 4 in a row in any direction:
+            <ul>
+              <li>Horizontal rows</li>
+              <li>Vertical columns</li>
+              <li>Depth pillars</li>
+              <li>Any diagonal (including 3D diagonals)</li>
+            </ul>
+          </li>
+        </ul>
+        
+        <h3>DIFFICULTY LEVELS</h3>
+        <ul>
+          <li><span class="easy-text">EASY</span>: AI looks 2 moves ahead</li>
+          <li><span class="medium-text">MEDIUM</span>: AI looks 4 moves ahead</li>
+          <li><span class="insane-text">INSANE</span>: AI looks 6 moves ahead</li>
+        </ul>
+        
+        <h3>DEVELOPERS</h3>
+        <ul>
+          <li>Sai Vishnu Sathwik Gurijala</li>
+          <li>Esha Santhoshini Pothukanuru</li>
+          <li>Rishik Kasula</li>
+          <li>Sai Keerthan Bingi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <script defer src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
