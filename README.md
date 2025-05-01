@@ -87,7 +87,7 @@ A one-player, 4×4×4 Tic-Tac-Toe game with an AI opponent implemented using the
 project-root/
 ├─ backend/
 │  ├─ app.py              # Flask server and route handlers
-│  └─ game_logic.py       # Board setup, Mini-Max & Alpha–Beta AI logic
+│  └─ game_logic.py       # exta File But Not in use
 ├─ static/
 │  ├─ css/
 │  │  └─ style.css        # Retro terminal–style UI
