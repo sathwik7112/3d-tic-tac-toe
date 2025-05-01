@@ -101,7 +101,7 @@ project-root/
 ## Technical Implementation
 
 - **AI Algorithm**: The computer opponent uses the Mini-Max algorithm with Alpha-Beta pruning to efficiently search for optimal moves.
-- **Search Optimization**: Iterative deepening is employed to ensure the AI can return a move within the 5-second time limit.
+- **Search Optimization**: Iterative deepening is employed to ensure the AI can return a move.
 - **Win Detection**: Algorithms to detect winning conditions across rows, columns, and all 3D diagonals.
 - **RESTful API**: Backend Flask server provides endpoints for game state management and AI move calculation.
 
