@@ -2,8 +2,6 @@
 
 A one-player, 4×4×4 Tic-Tac-Toe game with an AI opponent implemented using the Mini-Max algorithm with Alpha–Beta pruning and a 5-second search cutoff. Difficulty levels control search depth: Easy (2 plies), Difficult (4 plies), Insane (6 plies).
 
-![Game Screenshot](https://via.placeholder.com/800x400.png?text=3D+Tic-Tac-Toe+Screenshot)
-
 ## Features
 
 - **3D Board**: Four 4×4 layers (64 slots) displayed in a retro terminal style UI.
