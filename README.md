@@ -107,14 +107,10 @@ project-root/
 
 ## Contributors
 
+- Sai Vishnu Sathwik Gurijala
 - Esha Santhoshini Pothukanuru
 - Rishik Kasula
 - Sai Keerthan Bingi
-- Sai Vishnu Sathwik Gurijala
-
-## License
-
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
